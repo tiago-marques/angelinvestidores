@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Investidores</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9ab4, #ffd6e8);
+            color: #333;
+            animation: backgroundScroll 10s linear infinite;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        @keyframes backgroundScroll {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 60px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+            animation: slideUp 1.5s ease-in-out;
+            flex: 1;
+        }
+
+        .hero {
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.0rem;
+            line-height: 1.6;
+            color: #fff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta {
+            margin-top: 30px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #ff69b4, #ff85c1);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+            color: #555;
+        }
+
+        .carousel {
+            max-width: 100%;
+            justify-content: center;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .carousel img {
+            margin: 0px auto;
+            width: 100px;
+            height: 100px;
+            display: none;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 5px;
+        }
+
+        .carousel img.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .carousel .caption {
+            display: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        .carousel .caption.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./logo.svg" alt="Logo Angel Investidores">
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Novos negócios até Investidores</h1>
+            <p>Somos uma organização sem fins lucrativos dedicada a ajudar novos negócios a encontrarem o apoio financeiro necessário para transformar suas ideias em realidade.<br/><br/> Juntos, podemos construir o futuro da inovação.</p>
+            
+        </section>
+
+        <section class="carousel">
+            <div>
+                <img src="https://i.pravatar.cc/800?img=56" class="active" alt="Pessoa 1">
+                <p class="caption active">João Silva - Business Advisor</p>
+            </div>
+            <div>
+                <img src="https://i.pravatar.cc/800?img=59" alt="Pessoa 2">
+                <p class="caption">Renato Abraão - Tech Advisor</p>
+            </div>
+            <div>
+                <img src="https://i.pravatar.cc/800?img=68" alt="Pessoa 3">
+                <p class="caption">Carlos Souza - Business Advisor</p>
+            </div>
+            <div>
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQHJ9ozo2ot-pA/profile-displayphoto-shrink_800_800/B4DZN0rSNPG0Ag-/0/1732829324882?e=1738195200&v=beta&t=5Q9t8CwqlnCJDGIuCGj9kWafLECMNthpndPbd1T97kE" alt="Pessoa 3">
+                <p class="caption">Tiago Marques - Business Advisor</p>
+            </div>
+        </section>
+
+        <div class="cta">
+            <a href="https://www.linkedin.com/company/angel-investidores/">Saiba Mais</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Angel Investidores. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const carouselItems = document.querySelectorAll('.carousel div');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            carouselItems[currentIndex].querySelector('img').classList.remove('active');
+            carouselItems[currentIndex].querySelector('.caption').classList.remove('active');
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            carouselItems[currentIndex].querySelector('img').classList.add('active');
+            carouselItems[currentIndex].querySelector('.caption').classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
